@@ -15,6 +15,7 @@ public class Pistol : MonoBehaviour
 
     public virtual void Shoot()
     {
+
         audioSource.PlayOneShot(gunshot);
         muzzleFlash.SetActive(true);
         Invoke(nameof(TurnOffMuzzleFlash), 0.1f);
