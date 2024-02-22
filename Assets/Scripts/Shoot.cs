@@ -1,51 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
-[RequireComponent(typeof(AudioSource))]
+
 public class Shoot : MonoBehaviour
 {
-    public AudioClip gunshot;
+    public TextMeshProUGUI ammoBox;
+    
     public float cooldown = 0.05f;
-    public GameObject bulletHole;
-    public GameObject muzzleFlash;
-
-    private AudioSource audioSource;
     private float lastShot;
 
-    void Start()
+    public int Ammo
     {
-        audioSource = GetComponent<AudioSource>();
-    }
-
-
-    void Update()
-    {
-        if(Input.GetButtonDown("Fire1") && Time.time > lastShot + cooldown)
+        get
         {
-            lastShot = Time.time;
-
-            audioSource.PlayOneShot(gunshot);
-            muzzleFlash.SetActive(true);
-            Invoke(nameof(TurnOffMuzzleFlash), 0.03f);
-
-            var ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-            if(Physics.Raycast(ray, out var hit))
-            {
-                if (hit.transform.CompareTag("Enemy"))
-                {
-                    hit.transform.GetComponent<Enemy>().Die();
-                }
-                else
-                {
-                    Instantiate(bulletHole , hit.point + hit.normal * 0.01f, Quaternion.LookRotation(hit.normal));
-                }
-            }
+            return ammo;
+        }
+        set
+        {
+            ammo = value;
+            ammoBox.text = $"Ammo: {ammo}";
         }
     }
-
-    void TurnOffMuzzleFlash()
+    public UnityEvent onShoot;
+    private int ammo = 10;
+    void Update()
     {
-        muzzleFlash.SetActive(false);
+        if(Input.GetButtonDown("Fire1") && Time.time > lastShot + cooldown && Ammo > 0)
+        {
+            Ammo--;
+            lastShot = Time.time;
+            onShoot.Invoke();
+        }
+        else if (Ammo == 0)
+        {
+            //TODO: empty glock sound
+        }
     }
 }
