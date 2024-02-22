@@ -445,6 +445,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DunceHat
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 81fb7aa9ba17f594ca32de96cb5aee75, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -518,7 +522,7 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 6e17e4f24b0014a96b9a0fe952c13614, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 51f8495a4b900c44dbe414720cd7adf1, type: 2}
+      objectReference: {fileID: 9100000, guid: 0621fae194260df4b900ddb6934ba379, type: 2}
     - target: {fileID: 5866666021909216657, guid: 6e17e4f24b0014a96b9a0fe952c13614, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
@@ -548,6 +552,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e17e4f24b0014a96b9a0fe952c13614, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2609240164704823921}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e17e4f24b0014a96b9a0fe952c13614, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 655362177862854716}
   m_SourcePrefab: {fileID: 100100000, guid: 6e17e4f24b0014a96b9a0fe952c13614, type: 3}
 --- !u!4 &2859155085643466305 stripped
 Transform:
@@ -611,7 +618,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8830011020709891704}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c0973902dcd229499a537631da50998, type: 3}
   m_Name: 
@@ -624,7 +631,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8830011020709891704}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 95268c29c702c9e44ab5d863420325bb, type: 3}
@@ -713,3 +720,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &655362177862854716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8830011020709891704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77aec2ae88fd2c24a958a460543e897f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

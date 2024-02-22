@@ -481,6 +481,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e17e4f24b0014a96b9a0fe952c13614, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1014779261101484256}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e17e4f24b0014a96b9a0fe952c13614, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2024806968810303427}
   m_SourcePrefab: {fileID: 100100000, guid: 6e17e4f24b0014a96b9a0fe952c13614, type: 3}
 --- !u!95 &796920217530593991 stripped
 Animator:
@@ -554,6 +557,28 @@ MonoBehaviour:
   triggerDistance: 10
   forgerDistance: 30
   chasingSpeed: 4
+--- !u!195 &2024806968810303427
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6243333576607232519}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!4 &6768653382459664573 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6e17e4f24b0014a96b9a0fe952c13614, type: 3}
@@ -610,6 +635,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 81fb7aa9ba17f594ca32de96cb5aee75, type: 3}
       propertyPath: m_Name
       value: DunceHat
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 81fb7aa9ba17f594ca32de96cb5aee75, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
